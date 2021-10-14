@@ -1,29 +1,18 @@
-# wasp-payload-parser-template
+# wasp-payload-parser-oyster2
 
-Template repository for bootstrapping new WASP payload parsers. Use this repo as a template in GitHub when creating new `WASP` payload parsers. When forked a new pull request will automatically be created in the new repository to apply templating. A release workflow will run on merging.
-
-## What this repo provides
-
-This repo provides:
-
-- basic node.js project structure for a WASP payload parser
-- linting with WASP prettier configuration
-- open-sourcing materials
-- Docker file
-- A simple helm chart for the payload parser
-- Testing apparatus using `mocha`, `chai` and `supertest`
-- Github workflows for testing and release
+Payload parsing service for the [Digital Matter Oyster2 Sensor](https://www.digitalmatter.com/devices/oyster2/) when forwarded by the OEM Server HTTP connector.
 
 ## Getting started
 
-`wasp-payload-parser-template` can be run in a similar way to most nodejs applications. First install required dependencies using `npm`:
+`wasp-payload-parser-oyster2` can be run in a similar way to most nodejs applications. First install required dependencies using `npm`:
 
 ```sh
 npm install
 ```
 
 ### Testing
-For integration testing, `wasp-payload-parser-template` depends on Kafka and Zookeeper. These can be brought locally up using docker:
+
+For integration testing, `wasp-payload-parser-oyster2` depends on Kafka and Zookeeper. These can be brought locally up using docker:
 
 ```sh
 docker-compose up -d
@@ -37,11 +26,11 @@ npm test
 
 ## Environment Variables
 
-`wasp-payload-parser-template` is configured primarily using environment variables as follows:
+`wasp-payload-parser-oyster2` is configured primarily using environment variables as follows:
 
-| variable         | required |            default             | description                                        |
-| :--------------- | :------: | :----------------------------: | :------------------------------------------------- |
-| WASP_SENSOR_TYPE |    N     | `wasp-payload-parser-template` | Type of this sensor/thing for `wasp-thing-service` |
+| variable         | required |  default  | description                                        |
+| :--------------- | :------: | :-------: | :------------------------------------------------- |
+| WASP_SENSOR_TYPE |    N     | `oyster2` | Type of this sensor/thing for `wasp-thing-service` |
 
 The following environment variables configure the use of [`wasp-payload-processor`](https://github.com/digicatapult/wasp-payload-processor):
 
@@ -54,3 +43,7 @@ The following environment variables configure the use of [`wasp-payload-processo
 | KAFKA_READINGS_TOPIC         |    N     |    `readings`    | Outgoing Kafka topic for readings                                                       |
 | KAFKA_EVENTS_TOPIC           |    N     |     `events`     | Outgoing Kafka topic for events                                                         |
 | KAFKA_PAYLOAD_ROUTING_PREFIX |    N     |    `payloads`    | Prefix for incoming Kafka topics for payloads                                           |
+
+## Payload Format
+
+Note that the format of the payload forwarded by the HTTP connector is not very well documented. For the sake of developing this payload parser however, the parts that cover GPS location data and High-G impact data are. Our analysis of this can be found under [./docs/payload-format.md](./docs/payload-format.md)

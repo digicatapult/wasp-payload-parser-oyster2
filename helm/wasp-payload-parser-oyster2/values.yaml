@@ -4,7 +4,7 @@ kafka:
   enabled: true
 config:
   port: 80
-  waspSensorType: wasp-payload-parser-template
+  waspSensorType: oyster2
   logLevel: info
   kafkajsLogLevel: nothing
 
@@ -21,7 +21,7 @@ config:
     thingServiceName: wasp-thing-service
     thingServicePort: 80
 image:
-  repository: ghcr.io/digicatapult/wasp-payload-parser-template
+  repository: ghcr.io/digicatapult/wasp-payload-parser-oyster2
   pullPolicy: IfNotPresent
-  tag: 'v0.0.4'
+  tag: 'v1.0.1'
   pullSecrets: ['ghcr-digicatapult']
