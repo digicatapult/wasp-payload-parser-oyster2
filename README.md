@@ -47,3 +47,7 @@ The following environment variables configure the use of [`wasp-payload-processo
 ## Payload Format
 
 Note that the format of the payload forwarded by the HTTP connector is not very well documented. For the sake of developing this payload parser however, the parts that cover GPS location data and High-G impact data are. Our analysis of this can be found under [./docs/payload-format.md](./docs/payload-format.md)
+
+## Provisioning Devices
+
+A script to provision these devices from `oem-server` has been provided in the scripts folder.
