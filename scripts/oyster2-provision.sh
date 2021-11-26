@@ -56,7 +56,6 @@ if [ ! -s $OYSTER2_CSV_FILE ] ; then
     elif [[ $(file -b - < $OYSTER2_CSV_FILE ) =~ CRLF ]] ; then
         echo -e "File $OYSTER2_CSV_FILE has CRLF line endings, please convert to LF"
         exit 1
-    fi
 fi
 
 if [ ! -s $AUTH_TOKEN_FILE ] ; then
