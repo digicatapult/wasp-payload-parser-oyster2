@@ -23,5 +23,5 @@ config:
 image:
   repository: ghcr.io/digicatapult/wasp-payload-parser-oyster2
   pullPolicy: IfNotPresent
-  tag: 'v1.0.2'
+  tag: 'v1.0.3'
   pullSecrets: ['ghcr-digicatapult']
