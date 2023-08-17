@@ -1,6 +1,6 @@
 {
   "name": "@digicatapult/wasp-payload-parser-oyster2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "WASP Payload parser service for Digital Matter Oyster2 sensor",
   "main": "app/index.js",
   "scripts": {
