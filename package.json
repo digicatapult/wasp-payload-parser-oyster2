@@ -1,6 +1,6 @@
 {
   "name": "@digicatapult/wasp-payload-parser-oyster2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "WASP Payload parser service for Digital Matter Oyster2 sensor",
   "main": "app/index.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "delay": "^5.0.0",
     "depcheck": "^1.4.0",
     "eslint": "^7.21.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "kafkajs": "^1.15.0",
     "mocha": "^8.3.0",
